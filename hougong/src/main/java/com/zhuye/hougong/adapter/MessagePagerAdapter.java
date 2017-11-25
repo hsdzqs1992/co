@@ -48,12 +48,17 @@ public class MessagePagerAdapter extends FragmentStatePagerAdapter {
     }
 
 //    @Override
+//    public boolean isViewFromObject(View view, Object object) {
+//        return view ==object;
+//    }
+//
+//    //@Override
 //    public Object instantiateItem(ViewGroup container, int position) {
 //        container.addView(fargments.get(position).rootView);
 //        //container.
 //        return fargments.get(position);
 //    }
-//
+////
 //    @Override
 //    public void destroyItem(ViewGroup container, int position, Object object) {
 //        super.destroyItem(container, position, object);

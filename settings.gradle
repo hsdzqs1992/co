@@ -1,1 +1,1 @@
-include ':app', ':hougong'
+include ':app', ':hougong', ':tablayout'

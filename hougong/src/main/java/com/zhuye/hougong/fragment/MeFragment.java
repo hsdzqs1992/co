@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,6 @@ import com.zhuye.hougong.utils.CommentUtils;
 import com.zhuye.hougong.utils.SpUtils;
 import com.zhuye.hougong.view.FansActivity;
 import com.zhuye.hougong.view.GuanZhuActivity;
-import com.zhuye.hougong.view.LoginActivity;
 import com.zhuye.hougong.view.LookMeActivity;
 import com.zhuye.hougong.view.MyFriendsActivity;
 import com.zhuye.hougong.view.MyWaletActivity;
@@ -154,14 +152,17 @@ public class MeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String token = SpUtils.getString(getActivity(), "token", "");
-                if (TextUtils.isEmpty(token)) {
 
-                    //没登录
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                } else {
-                    //登录
-                    startActivity(new Intent(getActivity(), PersonDetailActivity.class));
-                }
+                startActivity(new Intent(getActivity(), PersonDetailActivity.class));
+                return;
+//                if (TextUtils.isEmpty(token)) {
+//
+//                    //没登录
+//                   // startActivity(new Intent(getActivity(), LoginActivity.class));
+//                } else {
+//                    //登录
+//                    startActivity(new Intent(getActivity(), PersonDetailActivity.class));
+//                }
             }
         });
         setiv.setOnClickListener(new View.OnClickListener() {

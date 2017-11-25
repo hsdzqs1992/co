@@ -12,29 +12,31 @@
         android:layout_height="match_parent">
 
 
-        <ScrollView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <LinearLayout
-                android:orientation="vertical"
+        <com.cjj.MaterialHeadView
+            android:layout_width="match_parent"
+            android:layout_height="141dp">
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="141dp"
+                />
+        </com.cjj.MaterialHeadView>
 
-                <com.daimajia.slider.library.SliderLayout
-                    android:id="@+id/slider"
-                    android:layout_width="match_parent"
-                    android:layout_height="141dp"
-                    />
-                <android.support.v7.widget.RecyclerView
-                    android:background="#f5f5f5"
-                    android:layout_width="match_parent"
-                    android:id="@+id/fragment_home_recycle"
-                    android:layout_height="match_parent">
-                </android.support.v7.widget.RecyclerView>
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:background="#f5f5f5"
+                            android:layout_width="match_parent"
+                            android:id="@+id/fragment_home_recycle"
+                            android:layout_height="match_parent">
+                        </android.support.v7.widget.RecyclerView>
             </LinearLayout>
 
 
-        </ScrollView>
 
 
     </com.cjj.MaterialRefreshLayout>
